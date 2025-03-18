@@ -16,6 +16,7 @@ class UserRegistrationRequestSchema(BaseModel):
     def password_complexity(cls, password_value: str) -> str:
         return validate_password_strength(password_value)
 
+
 class UserRegistrationResponseSchema(BaseModel):
     id: int
     email: EmailStr
